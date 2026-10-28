@@ -51,6 +51,11 @@ every line of it before using the word "ready."
   the policy, or a ruling on the policy itself.
 - Keeps scope decoupled: unbuilt features never block a clean
   deliverable and never ride inside its report.
+- Reconciles the record, not just the artifact: any job that
+  changes a fact of record searches the project's living
+  documents for that fact and reconciles or names each hit,
+  so decision logs and specs do not drift silently behind
+  verified builds.
 
 ## Use it with any AI
 
