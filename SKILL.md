@@ -212,6 +212,43 @@ as a Blocker and the report says why. Blocker inflation is
 corrected by the human's ruling, never by the consolidator's
 optimism.
 
+## Living-document reconciliation
+
+Verification usually covers the artifact a job produced. It
+rarely covers the project's living documents (decision logs,
+READMEs, requirement sets, specs of record, plans), so those
+drift silently: every check passes while the record of
+record states facts the project has already moved past.
+
+- **Trigger.** Any job that changes a fact of record (a
+  decision lands, a deploy state changes, a feature ships,
+  an external route or provider goes live) owes a
+  reconciliation pass before it reports.
+- **Method.** (1) Name the fact in one line. (2) Search the
+  project's living documents for that fact's own terms.
+  (3) Reconcile each hit in the same job, or name it as
+  unreconciled. Search first; read only where the search
+  lands.
+- **Dated records are exempt.** Snapshots, dated reports,
+  and historical logs are never edited. A living document
+  that quotes a superseded claim only inside a dated
+  correction note is reconciled, not stale.
+- **Reporting.** The report carries a Reconciliation line
+  (see the format below). Unreconciled items are named:
+  Advisory for ordinary drift; Blocker, standing-law class,
+  when the stale document misstates a privacy-relevant
+  feature, a consent or access rule, or itself claims to
+  be the record of record for the fact. Unreconciled items
+  also seed the Not verified list.
+- **The calendar half.** Drift also happens outside jobs.
+  Pair this check with a scheduled freshness audit of the
+  project's living documents (weekly is a workable
+  cadence): the audit flags drift, it does not fix it.
+  This section is the change-time half; the audit is the
+  calendar half. A periodic check that both halves are
+  actually running is part of the discipline, not an
+  optional extra.
+
 ## Report format
 
 Saved with the project's records as
@@ -233,6 +270,10 @@ Inputs: <gate outputs; verification logs, incl. their Not
 <Blocker-class gates not fully run, and Not verified items
   from the inputs. Present here, in the report's first lines,
   never buried. "None" is a claim the states above must back.>
+
+## Reconciliation
+<Facts of record this ship changed; living documents
+  reconciled; unreconciled items named, or "none.">
 
 ## Blockers (<n causes>)
 - [gates that found it] Finding, in one sentence, with its
