@@ -249,6 +249,19 @@ record states facts the project has already moved past.
   actually running is part of the discipline, not an
   optional extra.
 
+## Standard texts are diffed against canon
+
+A file that claims to be a standard text (a license, a
+legal notice, policy boilerplate) is verified by diffing
+it against the canonical copy, never against a sibling
+copy and never by its presence, filename, or copyright
+line. Keep one canonical copy of each standard text in a
+known place; packages copy from canon. A mismatch is a
+Blocker, legal and compliance class. A scheduled audit
+that diffs standard texts across the project's trees
+against canon is the backstop for copies introduced
+outside a ship.
+
 ## Report format
 
 Saved with the project's records as

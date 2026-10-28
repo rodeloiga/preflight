@@ -9,7 +9,7 @@ and makes one decision.
 
 ## Why it exists
 
-It was specified by a practitioner whose projects had grown a
+It was specified by a program manager whose projects had grown a
 full bench of review gates: security, accessibility, privacy,
 copy, design. Each gate did its job, and each reported in its
 own format, on its own scale, in its own file. The volume
