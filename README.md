@@ -56,6 +56,10 @@ every line of it before using the word "ready."
   documents for that fact and reconciles or names each hit,
   so decision logs and specs do not drift silently behind
   verified builds.
+- Guards the bar itself: the report diffs the change against
+  the project's written floor, so a threshold lowered to reach
+  green surfaces as a finding instead of passing as a side
+  effect.
 
 ## Use it with any AI
 

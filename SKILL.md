@@ -278,6 +278,46 @@ that diffs standard texts across the project's trees
 against canon is the backstop for copies introduced
 outside a ship.
 
+## Floor integrity
+
+Every check verifies the deliverable against the bar. This
+check runs the other direction: it diffs the change itself
+against the project's written floor and asks whether the bar
+was quietly lowered to reach green. It runs on every ship, and
+its result is a required section of the report.
+
+A project's floor is its written quality bar: the standing
+rules, budgets, thresholds, registries, and check configurations
+the project has committed to, kept in one named place in the
+project records. A project with no written floor runs this
+check as NOT RUN until one exists.
+
+Watch the diff for the five cheapest roads to green:
+
+1. **The threshold moved.** A stated floor, budget, or severity
+   edited down inside the same change it was failing.
+2. **A test got easier.** A check skipped, deleted, or relaxed
+   (an assertion removed from a test that stayed; a pinned
+   expectation adapted) instead of the work fixed. Adaptations
+   may be legitimate; they are listed either way, and the human
+   rules.
+3. **A checker got silenced.** A suppression added, a file
+   excluded from a sweep, a verification scoped narrower than
+   its report claims.
+4. **Work is unfinished.** A stub, placeholder, or TODO standing
+   where the implementation belongs, shipped undisclosed.
+5. **An exception appeared.** A new exemption in any registry
+   without a decision behind it.
+
+Tightening is silent; only loosening surfaces. The check
+reports the rule and the location, never a secret value. A
+check that could not run is NOT RUN, never HELD; on a ship,
+Floor integrity in NOT RUN means the report is not clean. A
+WEAKENED item against a standing rule or a committed floor is
+a Blocker, standing-law class; against a project-local target,
+an Advisory, unless the project's own documents make it a
+Blocker.
+
 ## Report format
 
 Saved with the project's records as
@@ -303,6 +343,10 @@ Inputs: <gate outputs; verification logs, incl. their Not
 ## Reconciliation
 <Facts of record this ship changed; living documents
   reconciled; unreconciled items named, or "none.">
+
+## Floor integrity
+HELD / WEAKENED (<items, each with the rule and its location>) /
+  NOT RUN (<reason>)
 
 ## Blockers (<n causes>)
 - [gates that found it] Finding, in one sentence, with its
