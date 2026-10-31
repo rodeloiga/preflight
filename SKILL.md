@@ -248,6 +248,22 @@ record states facts the project has already moved past.
   calendar half. A periodic check that both halves are
   actually running is part of the discipline, not an
   optional extra.
+- **The change register.** Keep one register of
+  fact-of-record changes. A job that changes such a fact
+  files its entry in the same job: the fact, old form to
+  new form, every surface touched, the source, and the
+  check artifact (the search, extraction, report, or live
+  check that proves the change landed). The report's
+  Reconciliation line cites the entry. A change whose
+  entry has no artifact, or whose artifact does not show
+  the change on every named surface, is unreconciled:
+  Advisory for ordinary facts; Blocker, standing-law
+  class, when the fact is public-facing. The scheduled
+  freshness audit reconciles register entries against the
+  surfaces and flags missing, stale, or contradicted
+  artifacts. A correction recorded from its edit list
+  alone, with no post-change check across the whole
+  surface set, is how a fixed error survives its own fix.
 
 ## Standard texts are diffed against canon
 
